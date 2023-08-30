@@ -333,50 +333,60 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       ];
       
+    const chartContainer = document.getElementById('chart');
 
     // Loop through stations and add markers
     stations.forEach(station => {
         const marker = L.marker([station.site_latitude, station.site_longitude]).addTo(map);
 
-        // Custom popup content with a div for the chart
-        const popupContent = document.createElement('div');
-        const dropdown = createDropdown(station.csvFiles);
-        const chartContainer = document.createElement('canvas');
-        chartContainer.id = `chart-${station.name}`;
-        popupContent.appendChild(dropdown);
-        popupContent.appendChild(chartContainer);
-        
-        marker.bindPopup(popupContent, { maxWidth: 800 }); // Customize the popup width
+        // Create a tooltip or popup content for the marker
+        const tooltipContent = `
+        <strong>${station.site_code} : ${station.site_name}</strong><br>
+        Lat: ${station.site_latitude}<br>
+        Lon: ${station.site_longitude}<br>
+        Elev: ${station.site_elevation}
+        `;
 
-        marker.on('popupopen', () => {
-            const selectedCSVFile = dropdown.value;
+        // Bind the tooltip or popup to the marker
+        marker.bindTooltip(tooltipContent); // Tooltip
+
+        // Custom popup content with a div for the chart
+        // const popupContent = document.createElement('div');
+        // const dropdown = createDropdown(station.csvFiles);
+        // // chartContainer.id = `chart-${station.name}`;
+        // popupContent.appendChild(dropdown);
+        // // popupContent.appendChild(chartContainer);
+        
+        // marker.bindPopup(popupContent, { maxWidth: 800 }); // Customize the popup width
+
+        marker.on('click', () => {
+            const selectedCSVFile = station.csvFiles[0];
             // Fetch CSV data and render chart
-            console.log("popup open")
             fetch(selectedCSVFile)
                 .then(response => response.text())
                 .then(async data => {
                     // Parse CSV data (you may need to adjust this based on your CSV format)
                     const parsedData = await parseCSVData(data);
                     // Render chart
-                    renderChart(`chart-${station.name}`, station.name, parsedData);
+                    renderChart(chartContainer, station.name, parsedData);
                 })
                 .catch(error => console.error(error));
         });
 
         // Add an event listener to the dropdown to update the chart when the selection changes
-        dropdown.addEventListener('change', () => {
-            const selectedCSVFile = dropdown.value;
-            fetch(selectedCSVFile)
-                .then(response => response.text())
-                .then(data => {
-                    // Parse CSV data (you may need to adjust this based on your CSV format)
-                    const parsedData = parseCSVData(data);
+        // dropdown.addEventListener('change', () => {
+        //     const selectedCSVFile = dropdown.value;
+        //     fetch(selectedCSVFile)
+        //         .then(response => response.text())
+        //         .then(data => {
+        //             // Parse CSV data (you may need to adjust this based on your CSV format)
+        //             const parsedData = parseCSVData(data);
 
-                    // Render the chart inside the popup content
-                    renderChart(`chart-${station.name}`, station.name, parsedData);
-                })
-                .catch(error => console.error(error));
-        });
+        //             // Render the chart inside the popup content
+        //             renderChart(`chart-${station.name}`, station.name, parsedData);
+        //         })
+        //         .catch(error => console.error(error));
+        // });
     });
 
     // Function to parse CSV data (customize based on your CSV format)
@@ -411,8 +421,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Function to render the time series chart
-    function renderChart(containerId, stationName, data) {
-        const chartContainer = document.getElementById(containerId);
+    function renderChart(chartContainer, stationName, data) {
+        // const chartContainer = document.getElementById(containerId);
+
+        const zoomInstructions = document.getElementById('zoom-instructions');
+        if (zoomInstructions) {
+            zoomInstructions.style.display = 'block'; // Show instructions when not zoomed
+        }
         
         if (!!chart) {
             chart.destroy();
@@ -448,7 +463,36 @@ document.addEventListener("DOMContentLoaded", () => {
                         // You can display the value wherever you like, e.g., in a tooltip
                     }
                 },
+                plugins: {
+                    zoom: {
+                        zoom: {
+                            wheel: {
+                                enabled: true,
+                            },
+                            pinch: {
+                                enabled: true,
+                            },
+                            drag: {
+                                enabled: true,
+                            },
+                            mode: 'x',
+                            onZoom: (zoom) => {
+                                // Handle zoom event here
+                                // isChartZoomed = zoom.scales.x > 1; // Check if x-scale zoomed
+                                updateZoomInstructions(); // Call a function to update instructions
+                            },
+                        },
+                    },
+                },
             },
         });
+
+        // Function to update zoom instructions
+        function updateZoomInstructions() {
+            const zoomInstructions = document.getElementById('zoom-instructions');
+            if (zoomInstructions) {
+                zoomInstructions.style.display = 'none'; // Show instructions when not zoomed
+            }
+        }
     }
 });

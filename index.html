@@ -2,15 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Station Visualization Tool</title>
+    <title>NOAA CH4 Visualization Tool</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="map"></div>
-    <canvas id="chart"></canvas>
+    <canvas id="chart">
+    </canvas>
+    <div id="zoom-instructions">
+        <p>Click and drag on the chart to zoom in.</p>
+    </div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
     <script src="script.js"></script>
 </body>
 </html>
