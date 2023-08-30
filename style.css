@@ -1,7 +1,9 @@
 /* styles.css */
 #map {
     width: 100%;
-    height: 50vh;
+    height: 100%;
+    transition: height 0.5s; /* Transition for height change */
+    /* height: 50vh; */
 }
 
 #chart {
@@ -12,6 +14,8 @@
 body {
     display: flex;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: #3E4651;
 }
 
 #zoom-instructions {
@@ -24,4 +28,48 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     display: none;
+    font-size: 12px;
+}
+
+/* Full-screen map container */
+#map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: height 0.5s; /* Transition for height change */
+}
+
+/* Half-height chart container */
+#chart-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Initial height, can be adjusted */
+    background-color: white; /* Add your preferred background color */
+    transition: height 0.5s; /* Transition for height change */
+    overflow: hidden; /* Hide content that overflows the container */
+}
+
+/* Tool title card styles */
+.tool-title-card {
+    position: absolute;
+    font-size: 14px;
+    top: 10px;
+    right: 10px;
+    width: 40%;
+    padding: 10px 24px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* CSS styles for custom markers */
+.custom-marker {
+    font-size: 32px; /* Font size */
+    text-align: center; /* Center the text within the marker */
 }

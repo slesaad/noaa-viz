@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <title>NOAA CH4 Visualization Tool</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="map"></div>
-    <canvas id="chart">
-    </canvas>
-    <div id="zoom-instructions">
-        <p>Click and drag on the chart to zoom in.</p>
+    <div class="tool-title-card">
+        <h2>NOAA: ESRL Global Monitoring Laboratory: CH4 PFP</h2>
+        <p>The CH4 PFP data provides methane dry air mole fractions using air samples collected in glass flasks from 28 NOAA GML Carbon Cycle Cooperative Global Air Sampling Network sites across the United States. Samples were analyzed for methane by gas chromatography with flame ionization (GC/FID) detection or by cavity ring-down spectrometer (CRDS).</p>
     </div>
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    <div id="chart-container">
+        <div id="zoom-instructions">
+            <p>Click and drag, scroll or pinch on the chart to zoom in.</p>
+        </div>
+        <canvas id="chart">
+    </div>
+    </canvas>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>

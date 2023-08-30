@@ -1,6 +1,15 @@
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
     let chart = null;
+
+    const stationMarker = L.divIcon({
+        className: 'custom-marker', // Define a CSS class for styling
+        html: '📍', // Replace with your desired emoji or text-based symbol
+        iconSize: [32, 32], // Set the size of the icon
+        iconAnchor: [16, 32], // Adjust the anchor point if needed
+        popupAnchor: [0, -32], // Adjust the popup anchor if needed
+    });
+    
     // Initialize Leaflet map
     const map = L.map('map').setView([39.8283, -98.5795], 5); // Centered on the US
 
@@ -335,9 +344,28 @@ document.addEventListener("DOMContentLoaded", () => {
       
     const chartContainer = document.getElementById('chart');
 
+    const mapC = document.getElementById('map');
+    const mapContainer = document.getElementById('map-container');
+    const chartContainerB = document.getElementById('chart-container');
+
+    // Function to toggle map height and show/hide chart
+    function openChart() {
+        // Show chart and make map half-height
+        mapContainer.style.height = '50%';
+        chartContainerB.style.height = '50%';
+        // map.invalidateSize();
+        setTimeout(function(){ map.invalidateSize()}, 400);
+    }
+
+    const resizeObserver = new ResizeObserver(() => {
+        map.invalidateSize();
+      });
+      
+    resizeObserver.observe(mapContainer);
+
     // Loop through stations and add markers
     stations.forEach(station => {
-        const marker = L.marker([station.site_latitude, station.site_longitude]).addTo(map);
+        const marker = L.marker([station.site_latitude, station.site_longitude], { icon: stationMarker }).addTo(map);
 
         // Create a tooltip or popup content for the marker
         const tooltipContent = `
@@ -360,6 +388,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // marker.bindPopup(popupContent, { maxWidth: 800 }); // Customize the popup width
 
         marker.on('click', () => {
+            openChart();
             const selectedCSVFile = station.csvFiles[0];
             // Fetch CSV data and render chart
             fetch(selectedCSVFile)
@@ -368,7 +397,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     // Parse CSV data (you may need to adjust this based on your CSV format)
                     const parsedData = await parseCSVData(data);
                     // Render chart
-                    renderChart(chartContainer, station.name, parsedData);
+                    renderChart(chartContainer, station.site_name, parsedData);
                 })
                 .catch(error => console.error(error));
         });
@@ -436,14 +465,19 @@ document.addEventListener("DOMContentLoaded", () => {
         // Define a red color for the hovered point
         const redColor = 'rgb(255, 0, 0)';
 
+        // Limit the number of x-axis labels to a maximum of 10
+        const maxLabelsToShow = 10;
+        const stepSize = Math.ceil(data.length / maxLabelsToShow);
+
         // Create a Chart.js chart here using 'data'
         // Example:
         chart = new Chart(chartContainer, {
             type: 'line',
             data: {
-                labels: data.map(item => item.date),
+                // labels: data.map((item, index) => (index % stepSize === 0) ? item.date : ''), // Show label every stepSize data points
+                labels: data.map(item => item.date), // Show label every stepSize data points
                 datasets: [{
-                    label: stationName,
+                    label: "Methane Surface PFP, nmol/mol",
                     data: data.map(item => item.value),
                     borderColor: 'rgb(75, 192, 192)',
                     borderWidth: 2,
@@ -462,6 +496,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         console.log(`Hovered Value: ${value}`);
                         // You can display the value wherever you like, e.g., in a tooltip
                     }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            autoSkip: true, // Enable automatic skip
+                            maxTicksLimit: 10, // Maximum number of ticks to display
+                        },
+                    },
                 },
                 plugins: {
                     zoom: {
@@ -482,6 +524,18 @@ document.addEventListener("DOMContentLoaded", () => {
                                 updateZoomInstructions(); // Call a function to update instructions
                             },
                         },
+                    },
+                    title: {
+                        display: true,
+                        text: `${stationName}`, // Add your chart title here
+                        padding: {
+                            top: 10,
+                            bottom: 20,
+                        },
+                    },
+                    legend: {
+                        display: true,
+                        position: 'top', // You can change the position to 'bottom', 'left', or 'right'
                     },
                 },
             },
