@@ -2,6 +2,17 @@
 document.addEventListener("DOMContentLoaded", () => {
     let chart = null;
 
+
+    const chartContainer = document.getElementById('chart');
+
+    const mapC = document.getElementById('map');
+    const mapContainer = document.getElementById('map-container');
+    const chartContainerB = document.getElementById('chart-container');
+
+    // Parse query parameters from the URL
+    const queryParams = new URLSearchParams(window.location.search);
+    const stationCode = queryParams.get("station_code");
+    console.log(stationCode)
     const stationMarker = L.divIcon({
         className: 'custom-marker', // Define a CSS class for styling
         html: '📍', // Replace with your desired emoji or text-based symbol
@@ -341,12 +352,18 @@ document.addEventListener("DOMContentLoaded", () => {
           csvFiles: ["ch4_amt_surface-pfp_1_ccgg_event.txt"],
         },
       ];
-      
-    const chartContainer = document.getElementById('chart');
-
-    const mapC = document.getElementById('map');
-    const mapContainer = document.getElementById('map-container');
-    const chartContainerB = document.getElementById('chart-container');
+    
+    if (stationCode) {
+    // Find the station based on the query parameter
+    const selectedStation = stations.find(station => station.site_code === stationCode);
+    console.log(selectedStation)
+    // If a station with the specified code is found, zoom in and display the chart
+    if (selectedStation) {
+        const { site_latitude: lat, site_longitude: lon } = selectedStation;
+        map.setView([lat, lon], 10); // Adjust the zoom level as needed
+        renderStation(selectedStation);
+    }
+    }
 
     // Function to toggle map height and show/hide chart
     function openChart() {
@@ -362,6 +379,21 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       
     resizeObserver.observe(mapContainer);
+
+    function renderStation(station) {
+      openChart();
+      const selectedCSVFile = station.csvFiles[0];
+      // Fetch CSV data and render chart
+      fetch(selectedCSVFile)
+          .then(response => response.text())
+          .then(async data => {
+              // Parse CSV data (you may need to adjust this based on your CSV format)
+              const parsedData = await parseCSVData(data);
+              // Render chart
+              renderChart(chartContainer, station.site_name, parsedData);
+          })
+          .catch(error => console.error(error));
+    }
 
     // Loop through stations and add markers
     stations.forEach(station => {
@@ -388,18 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // marker.bindPopup(popupContent, { maxWidth: 800 }); // Customize the popup width
 
         marker.on('click', () => {
-            openChart();
-            const selectedCSVFile = station.csvFiles[0];
-            // Fetch CSV data and render chart
-            fetch(selectedCSVFile)
-                .then(response => response.text())
-                .then(async data => {
-                    // Parse CSV data (you may need to adjust this based on your CSV format)
-                    const parsedData = await parseCSVData(data);
-                    // Render chart
-                    renderChart(chartContainer, station.site_name, parsedData);
-                })
-                .catch(error => console.error(error));
+            renderStation(station)
         });
 
         // Add an event listener to the dropdown to update the chart when the selection changes
