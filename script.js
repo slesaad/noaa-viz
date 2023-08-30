@@ -2,7 +2,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     let chart = null;
 
-
     const chartContainer = document.getElementById('chart');
 
     const mapC = document.getElementById('map');
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Parse query parameters from the URL
     const queryParams = new URLSearchParams(window.location.search);
     const stationCode = queryParams.get("station_code");
-    console.log(stationCode)
+
     const stationMarker = L.divIcon({
         className: 'custom-marker', // Define a CSS class for styling
         html: '📍', // Replace with your desired emoji or text-based symbol
@@ -356,7 +355,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (stationCode) {
     // Find the station based on the query parameter
     const selectedStation = stations.find(station => station.site_code === stationCode);
-    console.log(selectedStation)
     // If a station with the specified code is found, zoom in and display the chart
     if (selectedStation) {
         const { site_latitude: lat, site_longitude: lon } = selectedStation;
@@ -446,9 +444,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let header_lines = data[0].split(":").slice(-1)[0].trim().replace("\n#\n#", "");
         header_lines = parseInt(header_lines);
         data = data.slice(header_lines - 1);
-        
         const lines = data.slice(1).map(line => line.replace("\n", "").split(" "));
-        let return_value = lines.map(line => {
+        const filtered = lines.filter(line => line[21] == "...").filter(line => line[10] !== "-999.99").filter(line => line[10] !== "0")
+        let return_value = filtered.map(line => {
             return {
                 date: line[7],
                 value: line[10]
