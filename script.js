@@ -1,5 +1,6 @@
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
+    let ghgBlue = "#092A65";
     let chart = null;
 
     const chartContainer = document.getElementById('chart');
@@ -12,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const queryParams = new URLSearchParams(window.location.search);
     const stationCode = queryParams.get("station_code");
 
-    const stationMarker = L.divIcon({
-        className: 'custom-marker', // Define a CSS class for styling
-        html: '📍', // Replace with your desired emoji or text-based symbol
-        iconSize: [32, 32], // Set the size of the icon
-        iconAnchor: [16, 32], // Adjust the anchor point if needed
-        popupAnchor: [0, -32], // Adjust the popup anchor if needed
-    });
+    // const stationMarker = L.divIcon({
+    //     className: 'custom-marker', // Define a CSS class for styling
+    //     html: '📍', // Replace with your desired emoji or text-based symbol
+    //     iconSize: [32, 32], // Set the size of the icon
+    //     iconAnchor: [16, 32], // Adjust the anchor point if needed
+    //     popupAnchor: [0, -32], // Adjust the popup anchor if needed
+    // });
     
     // Initialize Leaflet map
     const map = L.map('map').setView([39.8283, -98.5795], 5); // Centered on the US
@@ -395,14 +396,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Loop through stations and add markers
     stations.forEach(station => {
-        const marker = L.marker([station.site_latitude, station.site_longitude], { icon: stationMarker }).addTo(map);
+        const marker = L.marker([station.site_latitude, station.site_longitude]).addTo(map);
 
         // Create a tooltip or popup content for the marker
         const tooltipContent = `
         <strong>${station.site_code} : ${station.site_name}</strong><br>
         Lat: ${station.site_latitude}<br>
         Lon: ${station.site_longitude}<br>
-        Elev: ${station.site_elevation}
+        Elev: ${station.site_elevation} masl
         `;
 
         // Bind the tooltip or popup to the marker
