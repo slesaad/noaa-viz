@@ -1,3 +1,45 @@
+const plugin = {
+  id: 'corsair',
+  defaults: {
+      width: 1,
+      color: '#DEDEDE',
+      dash: [1000,1000],
+  },
+  afterInit: (chart, args, opts) => {
+    chart.corsair = {
+      x: 0,
+      y: 0,
+    }
+  },
+  afterEvent: (chart, args) => {
+    const {inChartArea} = args
+    const {type,x,y} = args.event
+
+    chart.corsair = {x, y, draw: inChartArea}
+    chart.draw()
+  },
+  beforeDatasetsDraw: (chart, args, opts) => {
+    const {ctx} = chart
+    const {top, bottom, left, right} = chart.chartArea
+    const {x, y, draw} = chart.corsair
+    if (!draw) return
+
+    ctx.save()
+    
+    ctx.beginPath()
+    ctx.lineWidth = opts.width
+    ctx.strokeStyle = opts.color
+    ctx.setLineDash(opts.dash)
+    ctx.moveTo(x, bottom)
+    ctx.lineTo(x, top)
+    // ctx.moveTo(left, y)
+    // ctx.lineTo(right, y)
+    ctx.stroke()
+    
+    ctx.restore()
+  }
+}
+
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
     let ghgBlue = "#092A65";
@@ -9,26 +51,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const mapContainer = document.getElementById('map-container');
     const chartContainerB = document.getElementById('chart-container');
 
+    // Replace 'MAPBOX_ACCESS_TOKEN' with your actual Mapbox access token
+    mapboxgl.accessToken = process.env.MAPBOX_ACCESS_TOKEN;
+
     // Parse query parameters from the URL
     const queryParams = new URLSearchParams(window.location.search);
     const stationCode = queryParams.get("station_code");
 
-    // const stationMarker = L.divIcon({
-    //     className: 'custom-marker', // Define a CSS class for styling
-    //     html: '📍', // Replace with your desired emoji or text-based symbol
-    //     iconSize: [32, 32], // Set the size of the icon
-    //     iconAnchor: [16, 32], // Adjust the anchor point if needed
-    //     popupAnchor: [0, -32], // Adjust the popup anchor if needed
-    // });
-    
-    // Initialize Leaflet map
-    const map = L.map('map').setView([39.8283, -98.5795], 5); // Centered on the US
-
-    // Add a tile layer to the map (you can choose your preferred tile layer)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/satellite-v9',
+      center: [-98.5795, 39.8283], // Centered on the US
+      zoom: 3
+    });
     // Sample station data (replace with your data)
     const stations = [
         {
@@ -369,12 +404,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // Show chart and make map half-height
         mapContainer.style.height = '50%';
         chartContainerB.style.height = '50%';
-        // map.invalidateSize();
-        setTimeout(function(){ map.invalidateSize()}, 400);
+        setTimeout(function(){ map.resize()}, 400);
     }
 
     const resizeObserver = new ResizeObserver(() => {
-        map.invalidateSize();
+        map.resize();
       });
       
     resizeObserver.observe(mapContainer);
@@ -394,9 +428,14 @@ document.addEventListener("DOMContentLoaded", () => {
           .catch(error => console.error(error));
     }
 
+    
     // Loop through stations and add markers
     stations.forEach(station => {
-        const marker = L.marker([station.site_latitude, station.site_longitude]).addTo(map);
+        const markerEl = document.createElement('div');
+        markerEl.className = 'marker';
+        const marker = new mapboxgl.Marker(markerEl)
+            .setLngLat([station.site_longitude, station.site_latitude])
+            .addTo(map);
 
         // Create a tooltip or popup content for the marker
         const tooltipContent = `
@@ -406,20 +445,21 @@ document.addEventListener("DOMContentLoaded", () => {
         Elev: ${station.site_elevation} masl
         `;
 
-        // Bind the tooltip or popup to the marker
-        marker.bindTooltip(tooltipContent); // Tooltip
+        const popup = new mapboxgl.Popup()
+            .setHTML(tooltipContent);
 
-        // Custom popup content with a div for the chart
-        // const popupContent = document.createElement('div');
-        // const dropdown = createDropdown(station.csvFiles);
-        // // chartContainer.id = `chart-${station.name}`;
-        // popupContent.appendChild(dropdown);
-        // // popupContent.appendChild(chartContainer);
-        
-        // marker.bindPopup(popupContent, { maxWidth: 800 }); // Customize the popup width
+        marker.setPopup(popup);
 
-        marker.on('click', () => {
-            renderStation(station)
+        marker.getElement().addEventListener('mouseenter', () => {
+            popup.addTo(map);
+        });
+
+        marker.getElement().addEventListener('mouseleave', () => {
+            popup.remove();
+        });
+
+        marker.getElement().addEventListener('click', () => {
+            renderStation(station);
         });
 
         // Add an event listener to the dropdown to update the chart when the selection changes
@@ -499,26 +539,40 @@ document.addEventListener("DOMContentLoaded", () => {
                 datasets: [{
                     label: "Methane Surface PFP, nmol/mol",
                     data: data.map(item => item.value),
-                    borderColor: 'rgb(75, 192, 192)',
+                    borderColor: '#440154',
                     borderWidth: 2,
                     fill: false,
-                    pointHoverBackgroundColor: redColor, // Set hover background color to red
-                    pointHoverBorderColor: redColor, // Set hover border color to red
+                    pointRadius: 0, // Remove the points
+                    hoverBorderWidth: 3,
+                    pointHoverBackgroundColor: "#440154", // Set hover background color to red
+                    pointHoverBorderColor: '#FFFFFF', // Set hover border color to red
+                    // tension: 0.4
                 }],
             },
             options: {
-                onHover: (event, chartElement) => {
-                    // Handle hover event here
-                    const activePoints = chart.getElementsAtEventForMode(event, 'index', chart.options);
-                    if (activePoints.length > 0) {
-                        const index = activePoints[0].index;
-                        const value = data[index].value;
-                        console.log(`Hovered Value: ${value}`);
-                        // You can display the value wherever you like, e.g., in a tooltip
-                    }
+                // onHover: (event, chartElement) => {
+                //     // Handle hover event here
+                //     const activePoints = chart.getElementsAtEventForMode(event, 'index', chart.options);
+                //     if (activePoints.length > 0) {
+                //         const index = activePoints[0].index;
+                //         const value = data[index].value;
+                //         console.log(`Hovered Value: ${value}`);
+                //         // You can display the value wherever you like, e.g., in a tooltip
+                //     }
+                // },
+                hover: {
+                  mode: 'index',
+                  intersect: false,
                 },
                 scales: {
                     x: {
+                        grid: {
+                          display: false,
+                          drawOnChartArea: false
+                        },
+                        // border: {
+                        //   display: false
+                        // },
                         ticks: {
                             autoSkip: true, // Enable automatic skip
                             maxTicksLimit: 10, // Maximum number of ticks to display
@@ -526,6 +580,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
                 },
                 plugins: {
+                  corsair: {
+                    // color: 'black',
+                  },
                     zoom: {
                         zoom: {
                             wheel: {
@@ -559,6 +616,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
                 },
             },
+            plugins: [plugin]
         });
 
         // Function to update zoom instructions

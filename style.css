@@ -68,8 +68,12 @@ body {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* CSS styles for custom markers */
-.custom-marker {
-    font-size: 32px; /* Font size */
-    text-align: center; /* Center the text within the marker */
-}
+.marker {
+    background-image: url('marker-sdf.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: "#082A63";
+    cursor: pointer;
+  }
