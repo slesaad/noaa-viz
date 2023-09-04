@@ -1,3 +1,5 @@
+let ghgBlue = "#082A63";
+
 const plugin = {
   id: "corsair",
   defaults: {
@@ -37,12 +39,12 @@ const plugin = {
     ctx.stroke();
 
     ctx.restore();
+
   },
 };
 
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
-  let ghgBlue = "#092A65";
   let chart = null;
   const baseFileName = "surface-pfp_1_ccgg_event";
 
@@ -409,6 +411,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Show chart and make map half-height
     mapContainer.style.height = "50%";
     chartContainerB.style.height = "50%";
+    chartContainerB.style.display = 'block';
     setTimeout(function () {
       map.resize();
     }, 400);
@@ -561,23 +564,17 @@ document.addEventListener("DOMContentLoaded", () => {
             hoverBorderWidth: 3,
             pointHoverBackgroundColor: "#440154", // Set hover background color to red
             pointHoverBorderColor: "#FFFFFF", // Set hover border color to red
-            // tension: 0.4
           },
         ],
       },
       options: {
-        // onHover: (event, chartElement) => {
-        //     // Handle hover event here
-        //     const activePoints = chart.getElementsAtEventForMode(event, 'index', chart.options);
-        //     if (activePoints.length > 0) {
-        //         const index = activePoints[0].index;
-        //         const value = data[index].value;
-        //         console.log(`Hovered Value: ${value}`);
-        //         // You can display the value wherever you like, e.g., in a tooltip
-        //     }
-        // },
+        interaction: {
+          intersect: false,
+          mode: 'nearest',
+          axis: 'x'      
+        },
         hover: {
-          mode: "index",
+          mode: "nearest",
           intersect: false,
         },
         scales: {
@@ -629,6 +626,32 @@ document.addEventListener("DOMContentLoaded", () => {
           legend: {
             display: true,
             position: "bottom", // You can change the position to 'bottom', 'left', or 'right'
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                  let label = context.dataset.label || '';
+                  let splitText = label.split(":")
+                  return `${context.parsed.y} : ${splitText[splitText.length-1]}`
+              },
+            },
+            mode: 'nearest',
+            intersect: false,
+            backgroundColor: '#FFFFFF',
+            titleColor: '#000',
+            bodyColor: '#000',
+            titleFontSize: 16,
+            titleFontColor: '#0066ff',
+            bodyFontColor: '#000',
+            bodyFontSize: 14,
+            displayColors: true,
+            cornerRadius: 5,
+            borderColor: "#DEDEDE",
+            borderWidth: 1,
+            padding: 8,
+            caretSize: 0,
+            boxPadding: 3
+            // multiKeyBackground: ghgBlue
           },
         },
       },
