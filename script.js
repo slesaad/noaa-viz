@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Replace 'MAPBOX_ACCESS_TOKEN' with your actual Mapbox access token
   mapboxgl.accessToken =
-    "pk.eyJ1IjoiY292aWQtbmFzYSIsImEiOiJjbGNxaWdqdXEwNjJnM3VuNDFjM243emlsIn0.NLbvgae00NUD5K64CD6ZyA";
+    "pk.eyJ1Ijoic2xlc2FhZCIsImEiOiJjbDd0anduOWUweml6NDFyMHI2MzN1ZHdmIn0.L8NDN4-Z41VeGCOHUMtjlg";
 
   // Parse query parameters from the URL
   const queryParams = new URLSearchParams(window.location.search);
