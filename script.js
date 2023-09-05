@@ -66,6 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const selectedGhg = ghg || "ch4";
   const selectedType = type || "flask";
 
+  const titleContainer = document.getElementById("title");
+  titleContainer.innerHTML = `<strong> NOAA: ESRL Global Monitoring Laboratory: ${selectedGhg === "ch4" ? "Methane" : "Carbondioxide"} ${selectedType === "flask" ? "(Flask)" : "(Surface PFP)"} </strong>`
+  titleContainer.style.display = "block"
+  titleContainer.style.color = ghgBlue
+
   const map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/mapbox/satellite-v9",
@@ -135,10 +140,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Create a tooltip or popup content for the marker
       const tooltipContent = `
-          <strong>${station.site_code} : ${station.site_name}, ${station.site_country}</strong><br>
-          Lat: ${station.site_latitude}<br>
-          Lon: ${station.site_longitude}<br>
-          Elev: ${station.site_elevation} masl
+          <strong style="color: ${ghgBlue}">${station.site_code} : ${station.site_name}}</strong><br>
+          <strong> ${station.site_country} </strong><br>
+          Latitude: ${station.site_latitude}<br>
+          Longitude: ${station.site_longitude}<br>
+          Elevation: ${station.site_elevation} ${station.site_elevation_unit}
           `;
 
       const popup = new mapboxgl.Popup().setHTML(tooltipContent);
@@ -245,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
         labels: data.map((item) => item.date), // Show label every stepSize data points
         datasets: [
           {
-            label: `${selectedGhg == "ch4" ? "Methane" : "Carbondioxide"} Surface PFP, nmol/mol`,
+            label: `${selectedGhg === "ch4" ? "(CH₄) Methane" : "(CO₂) Carbon Dioxide"}`,
             data: data.map((item) => item.value),
             borderColor: "#440154",
             borderWidth: 2,
@@ -270,6 +276,10 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         scales: {
           x: {
+            title: {
+              display: true,
+              text: "Datetime"
+            },
             grid: {
               display: false,
               drawOnChartArea: false,
@@ -279,8 +289,14 @@ document.addEventListener("DOMContentLoaded", () => {
             // },
             ticks: {
               autoSkip: true, // Enable automatic skip
-              maxTicksLimit: 10, // Maximum number of ticks to display
+              maxTicksLimit: 8, // Maximum number of ticks to display
             },
+          },
+          y: {
+            title: {
+              text: `${selectedGhg === "ch4" ? "(CH₄) Methane" : "(CO₂) Carbon Dioxide"} (${selectedGhg === "ch4" ? "nmol/mol" : "µmol/mol"})`,
+              display: true
+            }
           },
         },
         plugins: {
