@@ -104,16 +104,15 @@ document.addEventListener("DOMContentLoaded", () => {
     mapContainer.style.height = "50%";
     chartContainerB.style.height = "50%";
     chartContainerB.style.display = "block";
-    setTimeout(function () {
-      map.resize();
-    }, 400);
   }
 
   const resizeObserver = new ResizeObserver(() => {
-    map.resize();
+    setTimeout(function () {
+      map.resize();
+    }, 0);
   });
 
-  resizeObserver.observe(mapContainer);
+  resizeObserver.observe(mapC);
 
   function renderStation(station) {
     openChart();

@@ -2,7 +2,7 @@
 #map {
     width: 100%;
     height: 100%;
-    transition: height 0.5s;
+    transition: height 1s ease-out;
     /* Transition for height change */
     /* height: 50vh; */
 }
@@ -10,6 +10,7 @@
 #chart {
     width: 100%;
     max-height: 50vh;
+    transition: height 1s ease-out;
 }
 
 body {
@@ -39,7 +40,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: height 0.5s;
+    transition: height 1s ease-out;
     /* Transition for height change */
 }
 
@@ -54,7 +55,7 @@ body {
     /* Initial height, can be adjusted */
     background-color: white;
     /* Add your preferred background color */
-    transition: height 0.5s;
+    transition: height 1s ease-out;
     /* Transition for height change */
     overflow: hidden;
     /* Hide content that overflows the container */
