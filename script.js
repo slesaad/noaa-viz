@@ -39,7 +39,6 @@ const plugin = {
     ctx.stroke();
 
     ctx.restore();
-
   },
 };
 
@@ -67,9 +66,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const selectedType = type || "flask";
 
   const titleContainer = document.getElementById("title");
-  titleContainer.innerHTML = `<strong> NOAA: ESRL Global Monitoring Laboratory: ${selectedGhg === "ch4" ? "Methane" : "Carbondioxide"} ${selectedType === "flask" ? "(Flask)" : "(Surface PFP)"} </strong>`
-  titleContainer.style.display = "block"
-  titleContainer.style.color = ghgBlue
+  titleContainer.innerHTML = `<strong> NOAA: ESRL Global Monitoring Laboratory: ${
+    selectedGhg === "ch4" ? "Methane" : "Carbondioxide"
+  } ${selectedType === "flask" ? "(Flask)" : "(Surface PFP)"} </strong>`;
+  titleContainer.style.display = "block";
+  titleContainer.style.color = ghgBlue;
 
   const map = new mapboxgl.Map({
     container: "map",
@@ -90,9 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const { site_latitude: lat, site_longitude: lon } = selectedStation;
       const stationLocation = {
         center: [lon, lat],
-        zoom: 10
-      }
-      map.flyTo({...stationLocation, duration: 1200, essential: true}); // Adjust the zoom level as needed
+        zoom: 10,
+      };
+      map.flyTo({ ...stationLocation, duration: 1200, essential: true }); // Adjust the zoom level as needed
       renderStation(selectedStation);
     }
   }
@@ -102,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Show chart and make map half-height
     mapContainer.style.height = "50%";
     chartContainerB.style.height = "50%";
-    chartContainerB.style.display = 'block';
+    chartContainerB.style.display = "block";
     setTimeout(function () {
       map.resize();
     }, 400);
@@ -116,7 +117,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderStation(station) {
     openChart();
-    const selectedFile = `${selectedType}/${selectedGhg}/${selectedGhg}_${station.site_code.toLowerCase()}_${station.dataset_project}_${baseFileName}.txt`;
+    const selectedFile = `${selectedType}/${selectedGhg}/${selectedGhg}_${station.site_code.toLowerCase()}_${
+      station.dataset_project
+    }_${baseFileName}.txt`;
     // Fetch data and render chart
     fetch(selectedFile)
       .then((response) => response.text())
@@ -163,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderStation(station);
       });
     } catch (error) {
-      console.log("error in", station.site_code)
+      // console.log("error in", station.site_code);
     }
 
     // Add an event listener to the dropdown to update the chart when the selection changes
@@ -251,7 +254,9 @@ document.addEventListener("DOMContentLoaded", () => {
         labels: data.map((item) => item.date), // Show label every stepSize data points
         datasets: [
           {
-            label: `${selectedGhg === "ch4" ? "(CH₄) Methane" : "(CO₂) Carbon Dioxide"}`,
+            label: `${
+              selectedGhg === "ch4" ? "(CH₄) Methane" : "(CO₂) Carbon Dioxide"
+            }`,
             data: data.map((item) => item.value),
             borderColor: "#440154",
             borderWidth: 2,
@@ -268,8 +273,8 @@ document.addEventListener("DOMContentLoaded", () => {
       options: {
         interaction: {
           intersect: false,
-          mode: 'nearest',
-          axis: 'x'      
+          mode: "nearest",
+          axis: "x",
         },
         hover: {
           mode: "nearest",
@@ -279,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
           x: {
             title: {
               display: true,
-              text: "Datetime"
+              text: "Datetime",
             },
             grid: {
               display: false,
@@ -296,9 +301,11 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           y: {
             title: {
-              text: `${selectedGhg === "ch4" ? "(CH₄) Methane" : "(CO₂) Carbon Dioxide"} (${selectedGhg === "ch4" ? "nmol/mol" : "µmol/mol"})`,
-              display: true
-            }
+              text: `${
+                selectedGhg === "ch4" ? "(CH₄) Methane" : "(CO₂) Carbon Dioxide"
+              } (${selectedGhg === "ch4" ? "nmol/mol" : "µmol/mol"})`,
+              display: true,
+            },
           },
         },
         plugins: {
@@ -335,7 +342,7 @@ document.addEventListener("DOMContentLoaded", () => {
               size: 24,
               family: "Inter",
             },
-            color: ghgBlue
+            color: ghgBlue,
           },
           legend: {
             display: true,
@@ -343,20 +350,22 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           tooltip: {
             callbacks: {
-              label: function(context) {
-                  let label = context.dataset.label || '';
-                  let splitText = label.split(":")
-                  return `${context.parsed.y} : ${splitText[splitText.length-1]}`
+              label: function (context) {
+                let label = context.dataset.label || "";
+                let splitText = label.split(":");
+                return `${context.parsed.y} : ${
+                  splitText[splitText.length - 1]
+                }`;
               },
             },
-            mode: 'nearest',
+            mode: "nearest",
             intersect: false,
-            backgroundColor: '#FFFFFF',
-            titleColor: '#000',
-            bodyColor: '#000',
+            backgroundColor: "#FFFFFF",
+            titleColor: "#000",
+            bodyColor: "#000",
             titleFontSize: 16,
-            titleFontColor: '#0066ff',
-            bodyFontColor: '#000',
+            titleFontColor: "#0066ff",
+            bodyFontColor: "#000",
             bodyFontSize: 14,
             displayColors: true,
             cornerRadius: 5,
@@ -364,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
             borderWidth: 1,
             padding: 8,
             caretSize: 0,
-            boxPadding: 3
+            boxPadding: 3,
             // multiKeyBackground: ghgBlue
           },
         },

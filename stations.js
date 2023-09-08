@@ -3,7 +3,8 @@ const stations_data = {
     co2: [
       {
         site_code: "WIS",
-        site_name: "Weizmann Institute of Science at the Arava Institute, Ketura",
+        site_name:
+          "Weizmann Institute of Science at the Arava Institute, Ketura",
         site_country: "Israel",
         site_country_flag:
           "https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/ISRA0001.GIF",
@@ -25,7 +26,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_wis_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ICE",
@@ -51,7 +51,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_ice_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "LEF",
@@ -77,7 +76,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_lef_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BME",
@@ -103,7 +101,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_bme_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MHD",
@@ -129,7 +126,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mhd_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SCS",
@@ -155,7 +151,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/README_co2_surface-flask_ccgg.html",
-        csvFiles: "co2_scs_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BSC",
@@ -181,7 +176,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_bsc_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BAL",
@@ -207,7 +201,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_bal_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MEX",
@@ -233,7 +226,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mex_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BKT",
@@ -259,7 +251,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_bkt_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ABP",
@@ -285,7 +276,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_abp_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MKO",
@@ -311,7 +301,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mko_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "PSA",
@@ -337,7 +326,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_psa_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KZD",
@@ -363,7 +351,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_kzd_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SUM",
@@ -389,7 +376,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "co2_sum_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "UTA",
@@ -415,7 +401,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_uta_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CIB",
@@ -441,7 +426,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_cib_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CGO",
@@ -467,7 +451,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_cgo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "LMP",
@@ -493,7 +476,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_lmp_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "RPB",
@@ -519,7 +501,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_rpb_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SGI",
@@ -545,7 +526,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_sgi_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "OXK",
@@ -571,7 +551,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_oxk_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "USH",
@@ -597,7 +576,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_ush_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BRW",
@@ -623,7 +601,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "co2_brw_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BHD",
@@ -649,7 +626,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_bhd_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SYO",
@@ -675,7 +651,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_syo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SHM",
@@ -701,7 +676,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_shm_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "TAC",
@@ -727,7 +701,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_tac_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "DRP",
@@ -753,7 +726,6 @@ const stations_data = {
         dataset_project: "shipboard-flask",
         dataset_platform: "mobile",
         dataset_selection: "event",
-        csvFiles: "co2_drp_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KUM",
@@ -779,7 +751,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_kum_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "LLB",
@@ -805,7 +776,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_llb_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "OPW",
@@ -831,7 +801,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_opw_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "NMB",
@@ -857,7 +826,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_nmb_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AMY",
@@ -883,7 +851,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_amy_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MKN",
@@ -909,7 +876,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mkn_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AVI",
@@ -935,7 +901,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_avi_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "STC",
@@ -961,7 +926,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/README_co2_surface-flask_ccgg.html",
-        csvFiles: "co2_stc_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AMS",
@@ -987,7 +951,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_ams_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "LLN",
@@ -1013,7 +976,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_lln_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ASC",
@@ -1039,7 +1001,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_asc_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "PTA",
@@ -1065,7 +1026,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_pta_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "WPC",
@@ -1091,7 +1051,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/README_co2_surface-flask_ccgg.html",
-        csvFiles: "co2_wpc_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "PAL",
@@ -1117,7 +1076,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "co2_pal_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AOC",
@@ -1143,7 +1101,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/README_co2_surface-flask_ccgg.html",
-        csvFiles: "co2_aoc_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BMW",
@@ -1169,7 +1126,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_bmw_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MLO",
@@ -1195,7 +1151,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "co2_mlo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SGP",
@@ -1221,7 +1176,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "co2_sgp_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CPT",
@@ -1247,7 +1201,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_cpt_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "NAT",
@@ -1273,7 +1226,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_nat_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "TAP",
@@ -1299,7 +1251,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_tap_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "WLG",
@@ -1325,7 +1276,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_wlg_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CMO",
@@ -1351,7 +1301,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_cmo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KEY",
@@ -1377,7 +1326,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_key_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CRZ",
@@ -1403,7 +1351,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_crz_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ZEP",
@@ -1429,7 +1376,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_zep_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CBA",
@@ -1455,7 +1401,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_cba_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "IZO",
@@ -1481,7 +1426,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "co2_izo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "NWR",
@@ -1507,7 +1451,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "co2_nwr_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SPO",
@@ -1533,7 +1476,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "co2_spo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "PAO",
@@ -1559,7 +1501,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/README_co2_surface-flask_ccgg.html",
-        csvFiles: "co2_pao_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "EIC",
@@ -1585,7 +1526,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_eic_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "GMI",
@@ -1611,7 +1551,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_gmi_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "GOZ",
@@ -1637,7 +1576,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_goz_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KCO",
@@ -1663,7 +1601,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_kco_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "DSI",
@@ -1689,7 +1626,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_dsi_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MBC",
@@ -1715,7 +1651,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mbc_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MID",
@@ -1741,7 +1676,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mid_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SMO",
@@ -1767,7 +1701,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "co2_smo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "HUN",
@@ -1793,7 +1726,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_hun_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "HPB",
@@ -1819,7 +1751,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_hpb_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AZR",
@@ -1845,7 +1776,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_azr_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "TPI",
@@ -1871,7 +1801,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_tpi_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "UUM",
@@ -1897,7 +1826,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_uum_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ALT",
@@ -1923,7 +1851,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_alt_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SDZ",
@@ -1949,7 +1876,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_sdz_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "THD",
@@ -1975,7 +1901,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "co2_thd_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KZM",
@@ -2001,7 +1926,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_kzm_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "HSU",
@@ -2027,7 +1951,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_hsu_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SEY",
@@ -2053,7 +1976,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_sey_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ASK",
@@ -2079,7 +2001,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_ask_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "HBA",
@@ -2105,7 +2026,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_hba_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "STM",
@@ -2131,7 +2051,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_stm_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "POC",
@@ -2157,7 +2076,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/README_co2_surface-flask_ccgg.html",
-        csvFiles: "co2_poc_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "TIK",
@@ -2183,7 +2101,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_tik_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CHR",
@@ -2209,7 +2126,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_chr_surface-flask_1_ccgg_event.txt",
       },
     ],
     ch4: [
@@ -2237,7 +2153,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_stm_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "HBA",
@@ -2263,7 +2178,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_hba_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ASK",
@@ -2289,7 +2203,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_ask_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CHR",
@@ -2315,7 +2228,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_chr_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "WKT",
@@ -2341,7 +2253,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_wkt_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "TIK",
@@ -2367,7 +2278,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_tik_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "UUM",
@@ -2393,7 +2303,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_uum_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SEY",
@@ -2419,7 +2328,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_sey_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "HSU",
@@ -2445,7 +2353,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_hsu_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "THD",
@@ -2471,7 +2378,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "ch4_thd_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KZM",
@@ -2497,7 +2403,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_kzm_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SDZ",
@@ -2523,7 +2428,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_sdz_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ALT",
@@ -2549,7 +2453,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_alt_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SMO",
@@ -2575,7 +2478,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "ch4_smo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AZR",
@@ -2601,7 +2503,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_azr_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "TPI",
@@ -2627,7 +2528,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_tpi_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "HPB",
@@ -2653,7 +2553,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_hpb_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SCS",
@@ -2679,7 +2578,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4/flask/README_ch4_surface-flask_ccgg.html",
-        csvFiles: "ch4_scs_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "HUN",
@@ -2705,7 +2603,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_hun_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "GOZ",
@@ -2731,7 +2628,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_goz_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MID",
@@ -2757,7 +2653,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mid_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MBC",
@@ -2783,7 +2678,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mbc_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KCO",
@@ -2809,7 +2703,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_kco_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "DSI",
@@ -2835,7 +2728,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_dsi_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "GMI",
@@ -2861,7 +2753,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_gmi_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "EIC",
@@ -2887,7 +2778,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_eic_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ITN",
@@ -2913,7 +2803,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_itn_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ZEP",
@@ -2939,7 +2828,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_zep_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CRZ",
@@ -2965,7 +2853,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_crz_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KEY",
@@ -2991,7 +2878,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_key_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CMO",
@@ -3017,7 +2903,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_cmo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "NWR",
@@ -3043,7 +2928,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "ch4_nwr_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SPO",
@@ -3069,7 +2953,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "ch4_spo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "IZO",
@@ -3095,7 +2978,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "ch4_izo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CBA",
@@ -3121,7 +3003,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_cba_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MCM",
@@ -3147,7 +3028,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mcm_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SGP",
@@ -3173,7 +3053,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "ch4_sgp_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "WLG",
@@ -3199,7 +3078,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_wlg_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "TAP",
@@ -3225,7 +3103,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_tap_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "DRP",
@@ -3251,7 +3128,6 @@ const stations_data = {
         dataset_project: "shipboard-flask",
         dataset_platform: "mobile",
         dataset_selection: "event",
-        csvFiles: "ch4_drp_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "NAT",
@@ -3277,7 +3153,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_nat_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CPT",
@@ -3303,7 +3178,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_cpt_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "PAL",
@@ -3329,7 +3203,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "ch4_pal_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "PTA",
@@ -3355,7 +3228,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_pta_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MLO",
@@ -3381,7 +3253,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "ch4_mlo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BMW",
@@ -3407,7 +3278,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_bmw_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "LLN",
@@ -3433,7 +3303,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_lln_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AMS",
@@ -3459,7 +3328,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_ams_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AVI",
@@ -3485,7 +3353,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_avi_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "PAO",
@@ -3511,7 +3378,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4/flask/README_ch4_surface-flask_ccgg.html",
-        csvFiles: "ch4_pao_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ASC",
@@ -3537,7 +3403,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_asc_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "OPW",
@@ -3563,7 +3428,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_opw_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KPA",
@@ -3589,7 +3453,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_kpa_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "LLB",
@@ -3615,7 +3478,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_llb_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KUM",
@@ -3641,7 +3503,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_kum_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MKN",
@@ -3667,7 +3528,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mkn_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AMY",
@@ -3693,7 +3553,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_amy_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "NMB",
@@ -3719,7 +3578,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_nmb_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "TAC",
@@ -3745,7 +3603,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_tac_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SYO",
@@ -3771,7 +3628,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_syo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SHM",
@@ -3797,7 +3653,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_shm_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BHD",
@@ -3823,7 +3678,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_bhd_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "USH",
@@ -3849,7 +3703,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_ush_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "OXK",
@@ -3875,7 +3728,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_oxk_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SGI",
@@ -3901,7 +3753,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_sgi_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AOC",
@@ -3927,7 +3778,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4/flask/README_ch4_surface-flask_ccgg.html",
-        csvFiles: "ch4_aoc_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "RPB",
@@ -3953,7 +3803,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_rpb_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "WPC",
@@ -3979,7 +3828,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4/flask/README_ch4_surface-flask_ccgg.html",
-        csvFiles: "ch4_wpc_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BRW",
@@ -4005,7 +3853,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "ch4_brw_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CIB",
@@ -4031,7 +3878,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_cib_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "AMT",
@@ -4057,7 +3903,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_amt_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "POC",
@@ -4083,7 +3928,6 @@ const stations_data = {
         dataset_selection_tag: "event",
         dataset_comment:
           "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4/flask/README_ch4_surface-flask_ccgg.html",
-        csvFiles: "ch4_poc_shipboard-flask_1_ccgg_event.txt",
       },
       {
         site_code: "LMP",
@@ -4109,7 +3953,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_lmp_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "CGO",
@@ -4135,7 +3978,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_cgo_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ABP",
@@ -4161,7 +4003,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_abp_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MKO",
@@ -4187,7 +4028,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mko_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BKT",
@@ -4213,7 +4053,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_bkt_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MEX",
@@ -4239,7 +4078,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mex_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BAL",
@@ -4265,7 +4103,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_bal_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "UTA",
@@ -4291,7 +4128,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_uta_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "KZD",
@@ -4317,7 +4153,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_kzd_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SUM",
@@ -4343,7 +4178,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-        csvFiles: "ch4_sum_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "PSA",
@@ -4369,7 +4203,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_psa_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "MHD",
@@ -4395,7 +4228,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mhd_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BSC",
@@ -4421,7 +4253,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_bsc_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "SIO",
@@ -4447,7 +4278,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_sio_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "LEF",
@@ -4473,7 +4303,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_lef_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "ICE",
@@ -4499,11 +4328,11 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_ice_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "WIS",
-        site_name: "Weizmann Institute of Science at the Arava Institute, Ketura",
+        site_name:
+          "Weizmann Institute of Science at the Arava Institute, Ketura",
         site_country: "Israel",
         site_country_flag:
           "https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/ISRA0001.GIF",
@@ -4525,7 +4354,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_wis_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "BME",
@@ -4551,7 +4379,6 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_bme_surface-flask_1_ccgg_event.txt",
       },
       {
         site_code: "NZL",
@@ -4577,9 +4404,8 @@ const stations_data = {
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_nzl_surface-flask_1_ccgg_event.txt",
       },
-    ]
+    ],
   },
   "surface-pfp": {
     co2: [
@@ -4607,7 +4433,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_msh_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MRC",
@@ -4633,11 +4458,11 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mrc_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "CRV",
-        site_name: "Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE)",
+        site_name:
+          "Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE)",
         site_country: "United States",
         site_country_flag:
           "https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF",
@@ -4659,7 +4484,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_crv_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MBO",
@@ -4685,7 +4509,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mbo_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "NWF",
@@ -4711,7 +4534,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_nwf_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "BAO",
@@ -4737,7 +4559,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_bao_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "SGP",
@@ -4763,7 +4584,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
-        csvFiles: "co2_sgp_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "INX",
@@ -4789,7 +4609,6 @@ const stations_data = {
         dataset_platform: "fixed",
         dataset_selection: "event",
         dataset_selection_tag: "event",
-        csvFiles: "co2_inx_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "WGC",
@@ -4815,7 +4634,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_wgc_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MWO",
@@ -4841,7 +4659,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mwo_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MLO",
@@ -4867,7 +4684,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
-        csvFiles: "co2_mlo_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "SCT",
@@ -4893,7 +4709,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_sct_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MKO",
@@ -4919,7 +4734,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mko_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "WBI",
@@ -4945,7 +4759,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_wbi_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "NWR",
@@ -4971,7 +4784,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
-        csvFiles: "co2_nwr_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "SPF",
@@ -4997,7 +4809,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_spf_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "LAC",
@@ -5023,7 +4834,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_lac_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "AMT",
@@ -5049,7 +4859,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_amt_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "KLM",
@@ -5075,7 +4884,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_klm_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "TMD",
@@ -5101,7 +4909,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_tmd_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "NWB",
@@ -5127,7 +4934,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_nwb_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MVY",
@@ -5153,7 +4959,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_mvy_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "NEB",
@@ -5179,7 +4984,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_neb_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "HFM",
@@ -5205,7 +5009,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_hfm_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "BWD",
@@ -5231,7 +5034,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_bwd_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "LEW",
@@ -5257,7 +5059,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_lew_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "STR",
@@ -5283,7 +5084,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_str_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "LEF",
@@ -5309,7 +5109,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_lef_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "WKT",
@@ -5335,7 +5134,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "co2_wkt_surface-pfp_1_ccgg_event.txt",
       },
     ],
     ch4: [
@@ -5363,7 +5161,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_lac_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "SPF",
@@ -5389,7 +5186,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_spf_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "NWR",
@@ -5415,7 +5211,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
-        csvFiles: "ch4_nwr_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "WBI",
@@ -5441,7 +5236,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_wbi_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MKO",
@@ -5467,7 +5261,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mko_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MWO",
@@ -5493,7 +5286,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mwo_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "WGC",
@@ -5519,7 +5311,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_wgc_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "SCT",
@@ -5545,7 +5336,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_sct_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MLO",
@@ -5571,7 +5361,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
-        csvFiles: "ch4_mlo_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "INX",
@@ -5597,7 +5386,6 @@ const stations_data = {
         dataset_platform: "fixed",
         dataset_selection: "event",
         dataset_selection_tag: "event",
-        csvFiles: "ch4_inx_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "SGP",
@@ -5623,7 +5411,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Methane",
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
-        csvFiles: "ch4_sgp_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "BAO",
@@ -5649,7 +5436,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_bao_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "NWF",
@@ -5675,7 +5461,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_nwf_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MBO",
@@ -5701,7 +5486,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mbo_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MSH",
@@ -5727,11 +5511,11 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_msh_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "CRV",
-        site_name: "Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE)",
+        site_name:
+          "Carbon in Arctic Reservoirs Vulnerability Experiment (CARVE)",
         site_country: "United States",
         site_country_flag:
           "https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/UNST0001.GIF",
@@ -5753,7 +5537,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_crv_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MRC",
@@ -5779,7 +5562,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mrc_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "WKT",
@@ -5805,7 +5587,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_wkt_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "LEF",
@@ -5831,7 +5612,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_lef_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "STR",
@@ -5857,7 +5637,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_str_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "BWD",
@@ -5883,7 +5662,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_bwd_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "LEW",
@@ -5909,7 +5687,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_lew_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "HFM",
@@ -5935,7 +5712,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_hfm_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "NEB",
@@ -5961,7 +5737,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_neb_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "MVY",
@@ -5987,7 +5762,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_mvy_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "NWB",
@@ -6013,7 +5787,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_nwb_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "TMD",
@@ -6039,7 +5812,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_tmd_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "KLM",
@@ -6065,7 +5837,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_klm_surface-pfp_1_ccgg_event.txt",
       },
       {
         site_code: "AMT",
@@ -6091,7 +5862,6 @@ const stations_data = {
         dataset_project: "surface-pfp",
         dataset_platform: "fixed",
         dataset_selection: "event",
-        csvFiles: "ch4_amt_surface-pfp_1_ccgg_event.txt",
       },
     ],
   },

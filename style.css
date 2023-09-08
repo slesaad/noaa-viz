@@ -2,7 +2,8 @@
 #map {
     width: 100%;
     height: 100%;
-    transition: height 0.5s; /* Transition for height change */
+    transition: height 0.5s;
+    /* Transition for height change */
     /* height: 50vh; */
 }
 
@@ -38,7 +39,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    transition: height 0.5s; /* Transition for height change */
+    transition: height 0.5s;
+    /* Transition for height change */
 }
 
 /* Half-height chart container */
@@ -48,10 +50,14 @@ body {
     left: 0;
     display: none;
     width: 100%;
-    height: 50%; /* Initial height, can be adjusted */
-    background-color: white; /* Add your preferred background color */
-    transition: height 0.5s; /* Transition for height change */
-    overflow: hidden; /* Hide content that overflows the container */
+    height: 50%;
+    /* Initial height, can be adjusted */
+    background-color: white;
+    /* Add your preferred background color */
+    transition: height 0.5s;
+    /* Transition for height change */
+    overflow: hidden;
+    /* Hide content that overflows the container */
 }
 
 /* Tool title card styles */
@@ -66,7 +72,8 @@ body {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    z-index: 1000; /* Ensure it's above other elements */
+    z-index: 1000;
+    /* Ensure it's above other elements */
     background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -78,7 +85,7 @@ body {
     border-radius: 50%;
     cursor: pointer;
     /* box-shadow: 1px 1px white; */
-  }
+}
 
 #logo {
     position: absolute;
