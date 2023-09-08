@@ -79,3 +79,10 @@ body {
     cursor: pointer;
     /* box-shadow: 1px 1px white; */
   }
+
+#logo {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+}

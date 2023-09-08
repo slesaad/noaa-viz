@@ -255,6 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
             data: data.map((item) => item.value),
             borderColor: "#440154",
             borderWidth: 2,
+            spanGaps: true,
             // fill: false,
             // pointRadius: 0, // Remove the points
             showLine: false,
@@ -284,12 +285,13 @@ document.addEventListener("DOMContentLoaded", () => {
               display: false,
               drawOnChartArea: false,
             },
-            // border: {
-            //   display: false
-            // },
+            type: "time",
             ticks: {
               autoSkip: true, // Enable automatic skip
               maxTicksLimit: 8, // Maximum number of ticks to display
+              // callback: function(value) {
+              //   return "fadhsdsf"
+              // }
             },
           },
           y: {
@@ -329,6 +331,11 @@ document.addEventListener("DOMContentLoaded", () => {
               top: 10,
               bottom: 20,
             },
+            font: {
+              size: 24,
+              family: "Inter",
+            },
+            color: ghgBlue
           },
           legend: {
             display: true,
