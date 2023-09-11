@@ -3,8 +3,7 @@ const stations_data = {
     co2: [
       {
         site_code: "WIS",
-        site_name:
-          "Weizmann Institute of Science at the Arava Institute, Ketura",
+        site_name: "Weizmann Institute of Science at the Arava Institute, Ketura",
         site_country: "Israel",
         site_country_flag:
           "https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/ISRA0001.GIF",
@@ -1476,31 +1475,6 @@ const stations_data = {
         dataset_parameter_industrial_name: "Carbon Dioxide",
         dataset_project: "surface-flask",
         dataset_platform: "fixed",
-      },
-      {
-        site_code: "PAO",
-        site_name: "Pacific-Atlantic Ocean",
-        site_country: "N/A",
-        site_country_flag:
-          "https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/",
-        site_latitude: "-1e+34",
-        site_longitude: "-1e+34",
-        site_elevation: "10.0",
-        site_elevation_unit: "masl",
-        site_position_comment:
-          "This is the nominal location of the site. The sampling location at many sites has changed over time, and we report here the most recent nominal location. The actual sampling location for each observation is not necessarily the site location. The sampling locations for each observation are reported in the latitude, longitude, and altitude variables.",
-        dataset_creation_date: "2023-08-28T15:12:28.852086",
-        dataset_num: "57",
-        dataset_name: "co2_pao_shipboard-flask_1_ccgg_event",
-        dataset_parameter: "co2",
-        dataset_parameter_name: "Carbon Dioxide",
-        dataset_parameter_industrial_name: "Carbon Dioxide",
-        dataset_project: "shipboard-flask",
-        dataset_platform: "mobile",
-        dataset_selection: "event",
-        dataset_selection_tag: "event",
-        dataset_comment:
-          "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/README_co2_surface-flask_ccgg.html",
       },
       {
         site_code: "EIC",
@@ -3355,31 +3329,6 @@ const stations_data = {
         dataset_selection: "event",
       },
       {
-        site_code: "PAO",
-        site_name: "Pacific-Atlantic Ocean",
-        site_country: "N/A",
-        site_country_flag:
-          "https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/",
-        site_latitude: "-1e+34",
-        site_longitude: "-1e+34",
-        site_elevation: "10.0",
-        site_elevation_unit: "masl",
-        site_position_comment:
-          "This is the nominal location of the site. The sampling location at many sites has changed over time, and we report here the most recent nominal location. The actual sampling location for each observation is not necessarily the site location. The sampling locations for each observation are reported in the latitude, longitude, and altitude variables.",
-        dataset_creation_date: "2023-08-28T15:12:28.852086",
-        dataset_num: "303",
-        dataset_name: "ch4_pao_shipboard-flask_1_ccgg_event",
-        dataset_parameter: "ch4",
-        dataset_parameter_name: "Methane",
-        dataset_parameter_industrial_name: "Methane",
-        dataset_project: "shipboard-flask",
-        dataset_platform: "mobile",
-        dataset_selection: "event",
-        dataset_selection_tag: "event",
-        dataset_comment:
-          "For more information about these data, please see https://gml.noaa.gov/aftp/data/trace_gases/ch4/flask/README_ch4_surface-flask_ccgg.html",
-      },
-      {
         site_code: "ASC",
         site_name: "Ascension Island",
         site_country: "United Kingdom",
@@ -4331,8 +4280,7 @@ const stations_data = {
       },
       {
         site_code: "WIS",
-        site_name:
-          "Weizmann Institute of Science at the Arava Institute, Ketura",
+        site_name: "Weizmann Institute of Science at the Arava Institute, Ketura",
         site_country: "Israel",
         site_country_flag:
           "https://gml.noaa.gov/webdata/ccgg/ObsPack/images/flags/ISRA0001.GIF",
