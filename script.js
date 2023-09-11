@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
     style: "mapbox://styles/mapbox/satellite-v9",
     center: [-98.5795, 39.8283], // Centered on the US
     zoom: 2,
+    projection: 'equirectangular'
   });
 
   const stations = stations_data[selectedType][selectedGhg];
@@ -126,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Parse data (you may need to adjust this based on your CSV format)
         const parsedData = await parseData(data);
         // Render chart
-        renderChart(chartContainer, station.site_name, parsedData);
+        renderChart(chartContainer, {name: station.site_name, code: station.site_code}, parsedData);
       })
       .catch((error) => console.error(error));
   }
@@ -142,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Create a tooltip or popup content for the marker
       const tooltipContent = `
-          <strong style="color: ${ghgBlue}">${station.site_code} : ${station.site_name}}</strong><br>
+          <strong style="color: ${ghgBlue}">${station.site_code} : ${station.site_name}</strong><br>
           <strong> ${station.site_country} </strong><br>
           Latitude: ${station.site_latitude}<br>
           Longitude: ${station.site_longitude}<br>
@@ -225,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Function to render the time series chart
-  function renderChart(chartContainer, stationName, data) {
+  function renderChart(chartContainer, station, data) {
     // const chartContainer = document.getElementById(containerId);
 
     const zoomInstructions = document.getElementById("zoom-instructions");
@@ -302,7 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: {
               text: `${
                 selectedGhg === "ch4" ? "(CH₄) Methane" : "(CO₂) Carbon Dioxide"
-              } (${selectedGhg === "ch4" ? "nmol/mol" : "µmol/mol"})`,
+              } (${selectedGhg === "ch4" ? "PPB" : "PPM"})`,
               display: true,
             },
           },
@@ -332,7 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
           title: {
             display: true,
-            text: `${stationName}`, // Add your chart title here
+            text: `${station.name} (${station.code})`, // Add your chart title here
             padding: {
               top: 10,
               bottom: 20,
