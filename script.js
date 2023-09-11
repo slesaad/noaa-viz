@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const map = new mapboxgl.Map({
     container: "map",
     style: "mapbox://styles/mapbox/satellite-v9",
-    center: [-98.5795, 39.8283], // Centered on the US
+    center: [-98.585522, 1.8333333], // Centered on the US
     zoom: 2,
     projection: 'equirectangular'
   });
