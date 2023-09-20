@@ -254,9 +254,9 @@ document.addEventListener("DOMContentLoaded", () => {
         labels: data.map((item) => item.date), // Show label every stepSize data points
         datasets: [
           {
-            label: `${
-              selectedGhg === "ch4" ? "(CH₄) Methane" : "(CO₂) Carbon Dioxide"
-            }`,
+            label: `Observed ${
+              selectedGhg === "ch4" ? "CH₄" : "CO₂"
+            } Concentration`,
             data: data.map((item) => item.value),
             borderColor: "#440154",
             borderWidth: 2,
@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
           x: {
             title: {
               display: true,
-              text: "Datetime",
+              text: "Observation Date/Time",
             },
             grid: {
               display: false,
@@ -302,8 +302,8 @@ document.addEventListener("DOMContentLoaded", () => {
           y: {
             title: {
               text: `${
-                selectedGhg === "ch4" ? "(CH₄) Methane" : "(CO₂) Carbon Dioxide"
-              } (${selectedGhg === "ch4" ? "PPB" : "PPM"})`,
+                selectedGhg === "ch4" ? "Methane (CH₄)" : "Carbon Dioxide (CO₂)"
+              } Concentration (${selectedGhg === "ch4" ? "ppb" : "ppm"})`,
               display: true,
             },
           },
