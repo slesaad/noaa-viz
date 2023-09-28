@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const titleContainer = document.getElementById("title");
   titleContainer.innerHTML = `<strong> NOAA: ESRL Global Monitoring Laboratory: ${
-    selectedGhg === "ch4" ? "Methane" : "Carbondioxide"
+    selectedGhg === "ch4" ? "Methane" : "Carbon dioxide"
   } ${selectedType === "flask" ? "(Flask)" : "(Surface PFP)"} </strong>`;
   titleContainer.style.display = "block";
   titleContainer.style.color = ghgBlue;
