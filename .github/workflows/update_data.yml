@@ -26,10 +26,10 @@ jobs:
       # - name: Run the data download script
       #   run: ./download.sh
 
-      # - name: Set current date as env variable
-      #   run: echo "NOW=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - name: Set current date as env variable
+        run: echo "NOW=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      # # Commit all changed files back to the repository
+      # Commit all changed files back to the repository
       # - name: Commit changes to a new branch
       #   uses: stefanzweifel/git-auto-commit-action@v5
       #   with:
