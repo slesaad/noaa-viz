@@ -41,6 +41,8 @@ jobs:
 
       - name: Create pull request to main
         if: steps.commit-changes.outputs.changes_detected == 'true'
-        run: gh pr create -H update-data-${{ env.NOW }} -B main --title 'Update data ${{ env.NOW }}' --body 'Scheduled data update. cc @slesaad \n Created by Github action'
+        run: |
+          echo -e "📅 Scheduled data update ${{ env.NOW }}. 🔔 @slesaad\nAutomatically created by Github action" > msg
+          gh pr create -H update-data-${{ env.NOW }} -B main --title 'Update data ${{ env.NOW }}' --body-file msg
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
