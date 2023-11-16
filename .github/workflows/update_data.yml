@@ -23,21 +23,21 @@ jobs:
       - uses: actions/checkout@v4
 
       # Other steps that change files in the repository
-      # - name: Run the data download script
-      #   run: ./download.sh
+      - name: Run the data download script
+        run: ./download.sh
 
       - name: Set current date as env variable
         run: echo "NOW=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
       # Commit all changed files back to the repository
-      # - name: Commit changes to a new branch
-      #   uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #       commit_message: Update data
-      #       create_branch: true
-      #       branch: update-data-${{ env.NOW }}
+      - name: Commit changes to a new branch
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+            commit_message: Update data
+            create_branch: true
+            branch: update-data-${{ env.NOW }}
 
       - name: Create pull request to main
-        run: gh pr create -B update-data-${{ env.NOW }} -H main --title 'Update data ${{ env.NOW }}' --body 'Created by Github action'
+        run: gh pr create -H update-data-${{ env.NOW }} -B main --title 'Update data ${{ env.NOW }}' --body 'Created by Github action'
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
