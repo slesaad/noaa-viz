@@ -17,24 +17,25 @@ jobs:
       # added or changed files to the repository.
       # This is needed because we want to write back the data to github
       contents: write
+      pull-requests: write
 
     steps:
       - uses: actions/checkout@v4
 
       # Other steps that change files in the repository
-      - name: Run the data download script
-        run: ./download.sh
+      # - name: Run the data download script
+      #   run: ./download.sh
 
-      - name: Set current date as env variable
-        run: echo "NOW=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      # - name: Set current date as env variable
+      #   run: echo "NOW=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      # Commit all changed files back to the repository
-      - name: Commit changes to a new branch
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-            commit_message: Update data
-            create_branch: true
-            branch: update-data-${{ env.NOW }}
+      # # Commit all changed files back to the repository
+      # - name: Commit changes to a new branch
+      #   uses: stefanzweifel/git-auto-commit-action@v5
+      #   with:
+      #       commit_message: Update data
+      #       create_branch: true
+      #       branch: update-data-${{ env.NOW }}
 
       - name: Create pull request to main
         run: gh pr create -B update-data-${{ env.NOW }} -H main --title 'Update data ${{ env.NOW }}' --body 'Created by Github action'
