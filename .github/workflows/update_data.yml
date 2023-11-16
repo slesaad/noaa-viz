@@ -31,13 +31,16 @@ jobs:
 
       # Commit all changed files back to the repository
       - name: Commit changes to a new branch
+        id: commit-changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
             commit_message: Update data
             create_branch: true
             branch: update-data-${{ env.NOW }}
+            file_pattern: 'flask/**.txt surface-pfp/*.txt'
 
       - name: Create pull request to main
-        run: gh pr create -H update-data-${{ env.NOW }} -B main --title 'Update data ${{ env.NOW }}' --body 'Created by Github action'
+        if: steps.commit-changes.outputs.changes_detected == 'true'
+        run: gh pr create -H update-data-${{ env.NOW }} -B main --title 'Update data ${{ env.NOW }}' --body 'Scheduled data update. cc @slesaad \n Created by Github action'
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
