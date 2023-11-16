@@ -9,7 +9,7 @@ on:
         - feat/auto-data-update
 
 jobs:
-  udpate-data:
+  update-data:
     runs-on: ubuntu-latest
 
     permissions:

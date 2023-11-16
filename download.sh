@@ -7,5 +7,5 @@ wget https://gml.noaa.gov/aftp/data/trace_gases/co2/flask/surface/co2_surface-fl
 wget https://gml.noaa.gov/aftp/data/trace_gases/ch4/flask/surface/ch4_surface-flask_ccgg_text.zip
 
 # unzip to data folder
-unzip -j co2_surface-flask_ccgg_text.zip co2_surface-flask_ccgg_text/*_event.txt -d flask/co2
-unzip -j ch4_surface-flask_ccgg_text.zip ch4_surface-flask_ccgg_text/*_event.txt -d flask/ch4
+unzip -j -o co2_surface-flask_ccgg_text.zip co2_surface-flask_ccgg_text/*_event.txt -d flask/co2
+unzip -j -o ch4_surface-flask_ccgg_text.zip ch4_surface-flask_ccgg_text/*_event.txt -d flask/ch4
