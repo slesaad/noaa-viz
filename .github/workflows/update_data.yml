@@ -37,7 +37,7 @@ jobs:
             commit_message: Update data
             create_branch: true
             branch: update-data-${{ env.NOW }}
-            file_pattern: 'flask/**.txt surface-pfp/*.txt'
+            file_pattern: 'flask/*/*.txt surface-pfp/*/*.txt'
 
       - name: Create pull request to main
         if: steps.commit-changes.outputs.changes_detected == 'true'
