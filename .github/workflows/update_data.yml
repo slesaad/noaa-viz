@@ -1,12 +1,9 @@
-name: Update data
+name: Update data on a schedule
 
 on:
-    # schedule:
-    #     - cron: 0 0 1 * *
-    workflow_dispatch:
-    push:
-      branches:
-        - feat/auto-data-update
+    schedule:
+      - cron: 0 0 1 * * # Runs on the first day of every month
+    workflow_dispatch: # Can be run manually if needed
 
 jobs:
   update-data:
@@ -14,22 +11,21 @@ jobs:
 
     permissions:
       # Give the default GITHUB_TOKEN write permission to commit and push the
-      # added or changed files to the repository.
-      # This is needed because we want to write back the data to github
+      # added or changed files to the repository and create a pull request
       contents: write
       pull-requests: write
 
     steps:
       - uses: actions/checkout@v4
 
-      # Other steps that change files in the repository
+      # Downloads and extracts the files to the respective directory
       - name: Run the data download script
         run: ./download.sh
 
       - name: Set current date as env variable
         run: echo "NOW=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      # Commit all changed files back to the repository
+      # Commit all changed files to a new branch back to the repository
       - name: Commit changes to a new branch
         id: commit-changes
         uses: stefanzweifel/git-auto-commit-action@v5
@@ -39,6 +35,7 @@ jobs:
             branch: update-data-${{ env.NOW }}
             file_pattern: 'flask/*/*.txt surface-pfp/*/*.txt'
 
+      # Create a PR from the new branch (if there was a change) to main
       - name: Create pull request to main
         if: steps.commit-changes.outputs.changes_detected == 'true'
         run: |
