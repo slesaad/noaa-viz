@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const selectedType = type || "flask";
 
   const titleContainer = document.getElementById("title");
-  titleContainer.innerHTML = `<strong> NOAA: ESRL Global Monitoring Laboratory: ${
+  titleContainer.innerHTML = `<strong> NOAA: Global Monitoring Laboratory: ${
     selectedGhg === "ch4" ? "Methane" : "Carbon dioxide"
   } ${selectedType === "flask" ? "(Flask)" : "(Surface PFP)"} </strong>`;
   titleContainer.style.display = "block";
