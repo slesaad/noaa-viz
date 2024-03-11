@@ -1,3 +1,10 @@
+import './style.css'
+import stations_data from './stations.js'
+import noaaLogo from './noaa-logo.png';
+
+
+let publicUrl = process.env.PUBLIC_URL;
+
 let ghgBlue = "#082A63";
 
 const plugin = {
@@ -44,6 +51,9 @@ const plugin = {
 
 // script.js
 document.addEventListener("DOMContentLoaded", () => {
+  // set noaa logo
+  document.getElementById("logo").src = noaaLogo;
+
   let chart = null;
   const baseFileName = "1_ccgg_event";
 
@@ -117,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderStation(station) {
     openChart();
-    const selectedFile = `${selectedType}/${selectedGhg}/${selectedGhg}_${station.site_code.toLowerCase()}_${
+    const selectedFile = `${publicUrl ? publicUrl : ""}/${selectedType}/${selectedGhg}/${selectedGhg}_${station.site_code.toLowerCase()}_${
       station.dataset_project
     }_${baseFileName}.txt`;
     // Fetch data and render chart
